@@ -1,0 +1,290 @@
+# This file is covered by the LICENSE file in the root of this project.
+labels: 
+  0 : "unlabeled"
+  1: "Smoke"
+  2: "Exhaust"
+  3: "Spray or rain"
+  4: "Reflection"
+  5: "Vegetation"
+  6: "Ground"
+  7: "Road"
+  8: "Lane Line Marking"
+  9: "Stop Line Marking"
+  10: "Other Road Marking"
+  11: "Sidewalk"
+  12: "Driveway"
+  13: "Car"
+  14: "Pickup Truck"
+  15: "Medium-sized Truck"
+  16: "Semi-truck"
+  17: "Towed Object"
+  18: "Motorcycle"
+  19: "Other Vehicle - Construction Vehicle"
+  20: "Other Vehicle - Uncommon"
+  21: "Other Vehicle - Pedicab"
+  22: "Emergency Vehicle"
+  23: "Bus"
+  24: "Personal Mobility Device"
+  25: "Motorized Scooter"
+  26: "Bicycle"
+  27: "Train"
+  28: "Trolley"
+  29: "Tram / Subway"
+  30: "Pedestrian"
+  31: "Pedestrian with Object"
+  32: "Animals - Bird"
+  33: "Animals - Other"
+  34: "Pylons"
+  35: "Road Barriers"
+  36: "Signs"
+  37: "Cones"
+  38: "Construction Signs"
+  39: "Temporary Construction Barriers"
+  40: "Rolling Containers"
+  41: "Building"
+  42: "Other Static Object"
+color_map: # bgr color based on semantic kitti
+  1: [0, 0, 0]
+  2: [0, 0, 0]
+  3: [0, 0, 0]
+  4: [0, 0, 0]
+  5: [0, 175, 0]
+  6: [80, 240, 150]
+  7: [255, 0, 255]
+  8: [255, 0, 255]
+  9: [255, 0, 255]
+  10: [255, 0, 255]
+  11: [75, 0, 75]
+  12: [255, 0, 255]
+  13: [245, 150, 100]
+  14: [245, 150, 100]
+  15: [150, 60, 30]
+  16: [150, 60, 30]
+  17: [180, 30, 80]
+  18: [250, 80, 100]
+  19: [180, 30, 80]
+  20: [180, 30, 80]
+  21: [180, 30, 80]
+  22: [180, 30, 80]
+  23: [180, 30, 80]
+  24: [0, 0, 0]
+  25: [245, 230, 100]
+  26: [245, 230, 100]
+  27: [180, 30, 80]
+  28: [180, 30, 80]
+  29: [180, 30, 80]
+  30: [30, 30, 255]
+  31: [30, 30, 255]
+  32: [0, 0, 0]
+  33: [0, 0, 0]
+  34: [255, 255, 50]
+  35: [255, 255, 50]
+  36: [0, 0, 255]
+  37: [255, 255, 50]
+  38: [0, 0, 255]
+  39: [255, 255, 50]
+  40: [255, 255, 50]
+  41: [0, 200, 255]
+  42: [255, 255, 50]
+content: # as a ratio with the total number of points
+  0: 2.6481104595197014e-07
+  1: 1.5950606861434459e-07
+  2: 3.10804543406786e-06
+  3: 2.6326244334406386e-08
+  4: 0.006686997692160895
+  5: 0.1815004285540913
+  6: 0.02430998541934895
+  7: 0.1429287298886696
+  8: 0.0036097539639642897
+  9: 0.0004203557890952905
+  10: 0.00572916065292654
+  11: 0.047912219183216934
+  12: 0.0009717620738846481
+  13: 0.1253897631445761
+  14: 0.01333775188888635
+  15: 0.010835241046561996
+  16: 6.808741086181445e-05
+  17: 0.0017709045122712014
+  18: 0.0004282908288582022
+  19: 0.0004112252281190752
+  20: 0.00022991638338801842
+  21: 0.00010574478047827093
+  22: 0.0006101169068602996
+  23: 0.005611696047911634
+  24: 8.090674325006245e-05
+  25: 0.0002637967112437915
+  26: 0.0005075328243047654
+  27: 9.864598612362864e-07
+  28: 0.0
+  29: 0.0044314781255793325
+  30: 0.003266054003960359
+  31: 0.0017989837747577576
+  32: 2.1680436510687612e-08
+  33: 2.8444732702022147e-05
+  34: 0.00010050740645833196
+  35: 0.00020217007046216198
+  36: 0.0023650367430126927
+  37: 0.00025796467382241655
+  38: 0.00039105003334327247
+  39: 0.001436268523331346
+  40: 0.0003052605460704816
+  41: 0.3138206219777781
+  42: 0.09787122488470096
+# classes that are indistinguishable from single scan or inconsistent in
+# ground truth are mapped to their closest equivalent
+learning_map:
+  0: 14     # Unlabeled -> Ignore
+  1: 14     # Smoke -> Ignore
+  2: 14     # Exhaust -> Ignore
+  3: 14     # Spray or Rain -> Ignore
+  4: 14     # Reflection -> Ignore
+  5: 10     # Vegetation -> Vegetation
+  6: 11     # Ground -> Terrain
+  7: 6      # Road -> Road
+  8: 6      # Lane Line Marking -> Road
+  9: 6      # Stop Line Marking -> Road
+  10: 6     # Other Road Marking -> Road
+  11: 8     # Sidewalk -> Sidewalk
+  12: 6     # Driveway -> Road
+  13: 0     # Car -> Car
+  14: 0     # Pickup Truck -> Car
+  15: 3     # Medium-sized Truck -> Truck
+  16: 3     # Semi-truck -> Truck
+  17: 4     # Towed Object -> Other Vehicle
+  18: 2     # Motorcycle -> Motorcycle
+  19: 4     # Other Vehicle - Construction Vehicle -> Other Vehicle
+  20: 4     # Other Vehicle - Uncommon -> Other Vehicle
+  21: 4     # Other Vehicle - Pedicab -> Other Vehicle
+  22: 4     # Emergency Vehicle -> Other Vehicle
+  23: 4     # Bus -> Other Vehicle
+  24: 14    # Personal Mobility Device -> Ignore
+  25: 1     # Motorized Scooter -> Bicycle
+  26: 1     # Bicycle -> Bicycle
+  27: 4     # Train -> Other Vehicle
+  28: 4     # Trolley -> Other Vehicle
+  29: 4     # Tram / Subway -> Other Vehicle
+  30: 5     # Pedestrian -> Person
+  31: 5     # Pedestrian with Object -> Person
+  32: 14    # Animals - Bird -> Ignore
+  33: 14    # Animals - Other -> Ignore
+  34: 7     # Pylons -> Road Barriers
+  35: 7     # Road Barriers -> Road Barriers
+  36: 13    # Signs -> Traffic Sign
+  37: 7     # Cones -> Road Barriers
+  38: 13    # Construction Signs -> Traffic Sign
+  39: 7     # Temporary Construction Barriers -> Road Barriers
+  40: 12    # Rolling Containers -> Background
+  41: 9     # Building -> Building
+  42: 12    # Other Static Object -> Background
+learning_map_inv: # inverse of previous map
+  0: 13     # "car"
+  1: 26     # "bicycle"
+  2: 18     # "motorcycle"
+  3: 15     # "truck"
+  4: 23     # "other-vehicle"
+  5: 30     # "person"
+  6: 7      # "road"
+  7: 39     # "road barriers"
+  8: 11     # "sidewalk"
+  9: 41     # "building"
+  10: 5     # "vegetation"
+  11: 6     # "ground"
+  12: 42    # "background"
+  13: 36    # "signs"
+  14: 0     # "unlabeled"
+learning_ignore: # Ignore classes
+  0: False      # "unlabeled", and others ignored
+  1: False     # "car"
+  2: False     # "bicycle"
+  3: False     # "motorcycle"
+  4: False     # "truck"
+  5: False     # "other-vehicle"
+  6: False     # "person"
+  7: False     # "bicyclist"
+  8: False     # "motorcyclist"
+  9: False     # "road"
+  10: False    # "parking"
+  11: False    # "sidewalk"
+  12: False    # "other-ground"
+  13: False    # "building"
+  14: True    # "unlabeled", ant others ignored
+split: # sequence numbers
+  train:
+    - 1
+    - 2
+    - 11
+    - 13
+    - 15
+    - 16
+    - 17
+    - 24
+    - 27
+    - 28
+    - 29
+    - 30
+    - 32
+    - 33
+    - 34
+    - 35
+    - 37
+    - 38
+    - 41
+    - 42
+    - 43
+    - 46
+    - 52
+    - 53
+    - 56
+    - 57
+    - 58
+    - 64
+    - 65
+    - 66
+    - 70
+    - 71
+    - 72
+    - 77
+    - 80
+    - 84
+    - 89
+    - 90
+    - 94
+    - 95
+    - 98
+    - 101
+    - 103
+    - 105
+    - 106
+    - 109
+    - 113
+    - 115
+    - 116
+    - 117
+    - 119
+    - 120
+    - 123
+    - 139
+    - 149
+  valid:
+    - 5
+    - 21
+    - 40
+    - 67
+    - 78
+    - 110
+    - 124
+  test:
+    - 3
+    - 19
+    - 23
+    - 39
+    - 44
+    - 54
+    - 69
+    - 73
+    - 88
+    - 97
+    - 102
+    - 112
+    - 122
+    - 158
