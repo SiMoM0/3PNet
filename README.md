@@ -1,8 +1,22 @@
-# 3PNet
+<div align="center">
+<h1>Point-Plane Projections for Accurate LiDAR Semantic Segmentation in Small Data Scenarios</h1>
 
-**Point-Plane Projections for Accurate LiDAR Semantic Segmentation in Small Data Scenarios**
+[**Simone Mosco**](https://simom0.github.io/), [**Daniel Fusaro**](https://bender97.github.io/danielfusaro.github.io/), [**Wanmeng Li**](https://lichonger2.github.io/), [**Emanuele Menegatti**](https://www.dei.unipd.it/~emg/), [**Alberto Pretto**](https://albertopretto.altervista.org/)
 
-![3PNet Architecture](3PNet.png)
+University of Padova
+
+<img
+    src="3PNet.png"
+    alt="teaser"
+    width="900"
+/>
+
+</div>
+
+## News
+
+- **2025-09-05**: Our paper [RangeRet](https://github.com/SiMoM0/RangeRet) is accepted to WACV 2026.
+- **2025-04-17**: Code and models of 3PNet are released.
 
 ## Installation/Requirements
 
@@ -84,9 +98,16 @@ Pre-trained model can be downloaded from [Drive](https://drive.google.com/drive/
 | pandaset_smalldata       | PandaSet  | Small Data          | 34.6 | 36.9 |
 | pandaset_fulldata        | PandaSet  | Full Data           |      | 65.2 |
 
-## Reference
+## Citation
 
-Paper submitted to CVIU.
+```
+@article{mosco2025point,
+  title={Point-Plane Projections for Accurate LiDAR Semantic Segmentation in Small Data Scenarios},
+  author={Mosco, Simone and Fusaro, Daniel and Li, Wanmeng and Menegatti, Emanuele and Pretto, Alberto},
+  journal={arXiv preprint arXiv:2509.10841},
+  year={2025}
+}
+```
 
 ## License
 
