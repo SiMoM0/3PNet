@@ -15,6 +15,7 @@ University of Padova
 
 ## News
 
+- **2026-02-21**: Our paper [LIDO](https://simom0.github.io/lido-page/) on 3D LiDAR Anomaly Segmentation is accepted to CVPR 2026.
 - **2025-09-05**: Our paper [RangeRet](https://github.com/SiMoM0/RangeRet) is accepted to WACV 2026.
 - **2025-04-17**: Code and models of 3PNet are released.
 
